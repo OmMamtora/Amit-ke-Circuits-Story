@@ -225,3 +225,10 @@ h2 { font-size: clamp(2.6rem, 6vw, 5.8rem); margin-bottom: 2rem; }
 
 :focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
 .motion-paused *, .motion-paused *::before, .motion-paused *::after { animation-play-state: paused !important; }
+
+
+.ar-home{ text-align:center; padding:120px 20px; border-top:1px solid rgba(255,255,255,.08);}
+.ar-home p{ max-width:650px; margin:auto; color:var(--muted);}
+.ar-home .button-row{ justify-content: center; margin-top:35px;}
+
+.thankyou-page{ display:grid;place-items:center;min-height:100vh;background:var(--ink);text-align:center;padding:40px; }

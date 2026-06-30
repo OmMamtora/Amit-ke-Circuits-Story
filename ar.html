@@ -7,45 +7,43 @@
     
     <title>Circuit AR | Amit Ke Circuits</title>
     
+    <!-- Original CSS (Assuming these exist in your project) -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <!-- Added for the WebAR POC (PRD: Circuit AR Badge) — additive only, existing stylesheets above are untouched -->
-    <link rel="stylesheet" href="css/ar.css">
     
+    <!-- AR Specific CSS -->
+    <link rel="stylesheet" href="css/ar.css">
+
+    <!-- Original JS -->
     <script src="js/analytics.js" defer></script>
     <script src="js/audio.js" defer></script>
-    <!-- Added for the WebAR POC -->
+    
+    <!-- AR Logic JS (OpenCV.js is loaded dynamically by ar.js itself) -->
     <script src="js/ar.js" defer></script>
 </head>
 <body class="inner-page ar-page">
     <div class="ambient-grid" aria-hidden="true"></div>
-    <!-- <header class="site-header"><a class="brand" href="index.html"><span class="brand-bolt">⚡</span><span>Amit Ke <strong>Circuits</strong></span></a>
-    </header> -->
-
     <main>
-
-        <!-- ===================== 1. ACTIVATE SCREEN (PRD §4 User Flow + §7 badge) ===================== -->
+        <!-- ACTIVATE SCREEN -->
         <section class="ar-activate" id="ar-activate">
             <div class="ar-badge-preview">
-            <img src="assets/images/circuit-ar-badge.png" alt="Circuit AR Badge — the printed marker found on the back of every coaster">
+                <img src="assets/ar/circuit-ar-badge.png" alt="Circuit AR Badge">
             </div>
             <p class="section-kicker">Activate AR ⚡</p>
-            <h1>Circuit AR<br><span>Badge Scanner</span></h1>
-            <p class="ar-copy">Point your camera at the Circuit AR Badge printed on the back of any Amit Ke Circuits coaster to bring it to life.</p>
+            <h1>Circuit AR<br><span>Card Scanner</span></h1>
+            <p class="ar-copy">Point your camera at any business card or ID card to bring up the Amit Ke Circuits microsite.</p>
             <ol class="ar-steps">
-            <li><span>1.</span> Tap "Activate Circuit AR" and allow camera access.</li>
-            <li><span>2.</span> Point your phone at the printed Circuit AR Badge, 20–40cm away.</li>
-            <li><span>3.</span> Watch the Amit Ke Circuits reveal appear on top of the badge.</li>
+                <li><span>1.</span> Tap "Activate Circuit AR" and allow camera access.</li>
+                <li><span>2.</span> Point your phone at any card — no special badge needed.</li>
+                <li><span>3.</span> Tap "Visit Microsite" once it appears.</li>
             </ol>
             <button class="button button-primary pulse" type="button" id="ar-activate-btn">Activate Circuit AR ⚡</button>
             <p class="ar-status" id="ar-status" aria-live="polite"></p>
-            <p class="ar-secondary-link">No printed badge handy? <a href="index.html#journey" data-track="ar_skip_to_microsite">Open the microsite instead →</a></p>
+            <p class="ar-secondary-link">Prefer not to use the camera? <a href="index.html#journey" data-track="ar_skip_to_microsite">Open the microsite instead →</a></p>
         </section>
-
-        <!-- ===================== 2. LIVE AR STAGE (mounted by js/ar.js once camera permission is granted) ===================== -->
+        <!-- LIVE AR STAGE (Initially hidden) -->
         <div class="ar-stage" id="ar-stage" hidden></div>
-
-        <!-- ===================== 3. FALLBACK (PRD §12 — exact copy/CTA, shown if camera/AR fails) ===================== -->
+        <!-- FALLBACK -->
         <section class="fallback-page" id="ar-fallback" hidden>
             <div class="fallback-icon">AR</div>
             <p class="section-kicker">Experimental Feature</p>
@@ -53,7 +51,6 @@
             <p>Camera ya AR load nahi hua? Koi tension nahi. Amit Ke Circuits microsite yahin se open karo.</p>
             <a class="button button-primary" href="index.html#journey" data-ar-open-microsite data-track="ar_open_microsite">Open Microsite</a>
         </section>
-
     </main>
 </body>
 </html>

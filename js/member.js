@@ -10,8 +10,17 @@
     return;
   }
 
-  var whatsapp = "https://wa.me/?text=" + encodeURIComponent("Hello " + member.name + ", I found you through Amit Ke Circuits and would like to discuss: " + member.problem + ".");
-  var email = "mailto:?subject=" + encodeURIComponent("Referral for " + member.name) + "&body=" + encodeURIComponent("Hello, I found " + member.name + " through Amit Ke Circuits.");
+  // var whatsapp = "https://wa.me/?text=" + encodeURIComponent("Hello " + member.name + ", I found you through Amit Ke Circuits and would like to discuss: " + member.problem + ".");
+  // var email = "mailto:?subject=" + encodeURIComponent("Referral for " + member.name) + "&body=" + encodeURIComponent("Hello, I found " + member.name + " through Amit Ke Circuits.");
+  var whatsapp = member.whatsapp ? "https://wa.me/" + member.whatsapp + "?text=" + encodeURIComponent(
+      "Hello " + member.name + ", I found you through Amit Ke Circuits and would like to discuss: " + member.problem + "."
+    ) : "#";
+
+  var email = member.email ? "mailto:" + member.email + "?subject=" + encodeURIComponent("Referral for " + member.name) +
+        "&body=" + encodeURIComponent(
+          "Hello " + member.name + ", I found you through Amit Ke Circuits."
+        ): "#";
+  
   document.title = member.name + " | Amit Ke Circuits";
 
   var portrait = member.photo
@@ -24,7 +33,8 @@
   var entryClass = member.characterImage ? "member-entry has-character character-" + member.id : (member.photo ? "member-entry has-character has-profile" : "member-entry");
   var entryVisual = member.characterImage || member.photo;
   var entryCharacter = entryVisual ? '<div class="entry-character-wrap"><span class="stage-effect" aria-hidden="true"></span><img class="entry-character" src="' + entryVisual + '" alt="' + (member.characterImage ? "Animated character representation of " : "Professional portrait of ") + member.name + '">' + (member.categoryProp ? '<img class="entry-category-prop" src="' + member.categoryProp + '" alt="' + member.prop + '">' : "") + '</div>' : "";
-  var danceCard = member.danceCard || "";
+  // var danceCard = member.danceCard || "";
+  var danceCard=member.danceCard || "#";
   var phone = member.phone || "";
   var steps = ["problem", "solution", "referral", "resource", "contact"];
   var stepLabels = { problem: "Problem Prop", solution: "Solution Prop", referral: "Referral Prop", resource: "Resource Prop", contact: "Contact Prop" };

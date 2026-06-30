@@ -3,18 +3,25 @@
 // videoUrl: "assets/videos/member-name.mp4",
 // videoPoster: "assets/images/member-name-video-poster.jpg"
 // Add a GA4 Measurement ID (for example, "G-ABC123XYZ") to enable the dashboard.
-window.CIRCUIT_GA_ID = "";
+window.CIRCUIT_GA_ID = "G-SPY1K894ND";
 window.CIRCUIT_TEAM = [
   {
-    id: "sopan", name: "Sopan Ghadge", initials: "SG", category: "Industrial & Civil Contractor", company: "Industrial Construction",
-    photo: "assets/images/sopan-profile.png", characterImage: "assets/images/sopan-character-v2.png", categoryProp: "assets/images/sopan-category-prop.png", sceneLabel: "Tension se solution tak",
-    problem: "Factory / Warehouse / Industrial Shed", tension: "Factory ka tension?", prop: "Helmet + Blueprint", icon: "helmet",
-    tagline: "Factory Amazon pe nahi milti… planning se banti hai.", promise: "From industrial planning to handover, build with clarity before the first brick moves.",
+    id: "sopan", name: "Sopan Ghadge", initials: "SG", category: "Industrial & Civil Contractor", 
+    company: "Industrial Construction",
+    photo: "assets/images/sopan-profile.png", characterImage: "assets/images/sopan-character-v2.png", 
+    categoryProp: "assets/images/sopan-category-prop.png", sceneLabel: "Tension se solution tak",
+    problem: "Factory / Warehouse / Industrial Shed", 
+    tension: "Factory ka tension?", prop: "Helmet + Blueprint", icon: "helmet",
+    tagline: "Factory Amazon pe nahi milti… planning se banti hai.", 
+    promise: "From industrial planning to handover, build with clarity before the first brick moves.",
     shortIntro: "Sopan helps factory owners plan and execute industrial sheds, warehouses and commercial construction without avoidable surprises.",
     referrals: ["Factory owners planning expansion", "Industrial plot owners", "Warehouse planners", "Commercial property owners", "Manufacturers adding a new facility"],
     rightReferrals: ["Industrial construction projects", "Factory sheds and warehouses", "Planned commercial builds"],
     notIdeal: ["Very small home repair work", "Projects without a clear site or budget", "Only material-supply enquiries"],
     resourceTitle: "Factory / Warehouse Construction Readiness Checklist", resourceFile: "assets/downloads/sopan-checklist.pdf",
+    phone: "919876543210",
+    whatsapp: "919876543210",
+    email: "amit@example.com",
     proof: ["Factories", "Warehouses", "Industrial sheds"], accent: "#f5b82e",
     propStory: {
       problem: ["Adhoora blueprint. Atke approvals.", "Factory ka plan hai, par site, approvals aur execution ka sequence clear nahi?"],
@@ -34,6 +41,9 @@ window.CIRCUIT_TEAM = [
     rightReferrals: ["New lift installations", "Lift modernisation", "Maintenance and replacement decisions"],
     notIdeal: ["One-time local electrical repair", "Escalator-only requirement", "Unapproved structural changes"],
     resourceTitle: "Lift Selection Checklist", resourceFile: "assets/downloads/prashant-checklist.pdf",
+    phone: "919876543210",
+    whatsapp: "919876543210",
+    email: "amit@example.com",    
     proof: ["New installs", "Modernisation", "Maintenance"], accent: "#ffe164",
     propStory: {
       problem: ["Lift button daba rahe ho… response aa raha hai?", "Stuck lift, warning sign, endless stairs or an old system creating daily tension."],
@@ -53,6 +63,9 @@ window.CIRCUIT_TEAM = [
     rightReferrals: ["Management reporting", "Accounts process clean-up", "Leakage and reconciliation reviews"],
     notIdeal: ["Personal investment advice", "Guaranteed tax avoidance", "Unrelated software development"],
     resourceTitle: "Money Leakage Checklist", resourceFile: "assets/downloads/prachi-checklist.pdf",
+    phone: "919876543210",
+    whatsapp: "919876543210",
+    email: "amit@example.com",
     proof: ["Clean books", "Clear reports", "Better controls"], accent: "#ffcb35",
     propStory: {
       problem: ["Paisa aa raha hai… jaa kahaan raha hai?", "Messy ledger, confused calculator and money leakage make business decisions guesswork."],
@@ -64,14 +77,21 @@ window.CIRCUIT_TEAM = [
   },
   {
     id: "amit", name: "Amit", initials: "AK", category: "Training & LMS", company: "Learning Systems",
-    photo: "assets/images/amit-profile.png", characterImage: "assets/images/amit-character-v2.png", categoryProp: "assets/images/amit-category-prop.png", sceneLabel: "Training se measurable growth tak",
-    problem: "Training / LMS / Employee Upskilling", tension: "Training ka tension?", prop: "Laptop + LMS", icon: "laptop",
-    tagline: "Training attendance sheet nahi… system hota hai.", promise: "Build repeatable learning systems that turn training into measurable capability.",
+    photo: "assets/images/amit-profile.png", characterImage: "assets/images/amit-character-v2.png", 
+    categoryProp: "assets/images/amit-category-prop.png", sceneLabel: "Training se measurable growth tak",
+    problem: "Training / LMS / Employee Upskilling", 
+    tension: "Training ka tension?", prop: "Laptop + LMS", icon: "laptop",
+    tagline: "Training attendance sheet nahi… system hota hai.", 
+    promise: "Build repeatable learning systems that turn training into measurable capability.",
     shortIntro: "Amit helps organisations audit training needs, structure learning journeys and deploy LMS-led upskilling that can actually be tracked.",
     referrals: ["HR leaders planning onboarding", "Companies needing an LMS", "Growing teams with inconsistent training", "Businesses building SOP learning", "L&D teams measuring completion"],
     rightReferrals: ["Employee upskilling systems", "LMS implementation", "Structured onboarding programmes"],
     notIdeal: ["One-time motivational talk only", "Random software enquiries", "School tuition requirements"],
-    resourceTitle: "Training Audit Sheet", resourceFile: "assets/downloads/amit-checklist.pdf",
+    resourceTitle: "Training Audit Sheet", 
+    resourceFile: "assets/downloads/amit-checklist.pdf",
+    phone: "919876543210",
+    whatsapp: "919876543210",
+    email: "amit@example.com",
     proof: ["Learning paths", "LMS", "Progress tracking"], accent: "#ffd640",
     propStory: {
       problem: ["Training ho rahi hai… par result aa raha hai kya?", "Laptop par confusion, attendance sheets scattered and no proof that skills are improving."],
@@ -91,6 +111,9 @@ window.CIRCUIT_TEAM = [
     rightReferrals: ["Corporate wellness initiatives", "Habit-based fitness programmes", "Team energy and health workshops"],
     notIdeal: ["Instant weight-loss promises", "Medical emergency treatment", "Unsupervised extreme training"],
     resourceTitle: "Workplace Wellness Checklist", resourceFile: "assets/downloads/tejaswini-checklist.pdf",
+    phone: "919876543210",
+    whatsapp: "919876543210",
+    email: "amit@example.com",
     proof: ["Fitness habits", "Team energy", "Wellness plans"], accent: "#ffe064",
     propStory: {
       problem: ["Body ki battery low chal rahi hai?", "Weak heartbeat, low energy and no sustainable fitness rhythm affect people and teams."],
@@ -110,6 +133,9 @@ window.CIRCUIT_TEAM = [
     rightReferrals: ["Corporate festive gifting", "Curated saree gifting", "Occasion and recognition gifts"],
     notIdeal: ["Generic commodity-only procurement", "Last-minute unconfirmed bulk orders", "Unrelated promotional merchandise"],
     resourceTitle: "Saree & Corporate Gifting Guide", resourceFile: "assets/downloads/shikha-checklist.pdf",
+    phone: "919876543210",
+    whatsapp: "919876543210",
+    email: "amit@example.com",
     proof: ["Curated sarees", "Corporate gifts", "Occasions"], accent: "#ffc53d",
     propStory: {
       problem: ["Gift diya… par yaad raha kya?", "Generic boxes and last-minute choices turn an important occasion into a forgettable gesture."],
@@ -129,6 +155,9 @@ window.CIRCUIT_TEAM = [
     rightReferrals: ["Office vending requirements", "High-footfall vending locations", "Managed convenience solutions"],
     notIdeal: ["Single domestic appliance requests", "Locations without viable footfall", "Guaranteed passive-income expectations"],
     resourceTitle: "Vending Machine Investment Guide", resourceFile: "assets/downloads/shubham-checklist.pdf",
+    phone: "919876543210",
+    whatsapp: "919876543210",
+    email: "amit@example.com",
     proof: ["Office vending", "Convenience", "Managed service"], accent: "#f4b72d",
     propStory: {
       problem: ["Snack ke liye team baar-baar bahar?", "Empty pantry, long tea breaks and no convenient refreshment option waste time every day."],

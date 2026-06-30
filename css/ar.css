@@ -1,0 +1,65 @@
+/* ar.css — additive stylesheet for the Circuit AR Badge WebAR POC (ar.html only) */
+
+.ar-page main { padding: 0; }
+
+/* ---------- Activation screen ---------- */
+.ar-activate { min-height: 100svh; max-width: 760px; margin: auto; padding: 8rem 2rem 4rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.ar-activate .section-kicker { color: var(--gold); }
+.ar-badge-preview { width: 150px; aspect-ratio: 1; border-radius: 1.4rem; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 0 60px rgba(245,189,50,.18); margin-bottom: 1.6rem; }
+.ar-badge-preview img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.ar-activate p.ar-copy { color: var(--muted); max-width: 32rem; }
+.ar-steps { list-style: none; margin: 1.6rem 0 2.2rem; padding: 0; display: grid; gap: .6rem; color: var(--muted); font-size: .85rem; text-align: left; max-width: 26rem; }
+.ar-steps li { display: flex; gap: .7rem; align-items: flex-start; }
+.ar-steps li span { color: var(--gold); font-weight: 800; }
+.ar-secondary-link { margin-top: 1.4rem; color: var(--muted); font-size: .8rem; }
+.ar-secondary-link a { color: var(--gold); }
+.ar-status { margin-top: 1.2rem; font-size: .78rem; color: var(--muted); min-height: 1.2em; }
+
+/* ---------- Live AR stage ---------- */
+.ar-stage { position: fixed; inset: 0; background: var(--ink); z-index: 5; }
+.ar-stage[hidden] { display: none; }
+.ar-stage video, .ar-stage canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; object-fit: cover; }
+
+.ar-hud-top { position: fixed; top: 0; left: 0; right: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 1.3rem; background: linear-gradient(to bottom, rgba(8,9,7,.75), transparent); }
+.ar-hud-top .brand { font-size: .85rem; }
+.ar-exit { color: var(--white); background: rgba(8,9,7,.6); border: 1px solid rgba(255,255,255,.22); border-radius: 999px; padding: .5rem .9rem; font-size: .75rem; cursor: pointer; }
+.ar-exit:hover { border-color: var(--gold); color: var(--gold); }
+
+.ar-hint { position: fixed; left: 0; right: 0; bottom: 1.6rem; z-index: 30; text-align: center; color: var(--white); font-size: .82rem; padding: 0 1.4rem; opacity: .85; transition: opacity .3s ease; }
+.ar-hint.is-hidden { opacity: 0; }
+
+/* Overlay shown when the Circuit AR Badge marker is detected */
+.ar-overlay { position: fixed; inset: 0; z-index: 25; display: flex; align-items: center; justify-content: center; padding: 2rem 1.4rem; opacity: 0; pointer-events: none; transition: opacity .35s ease; }
+.ar-overlay.is-visible { opacity: 1; pointer-events: auto; }
+.ar-overlay-card { position: relative; max-width: 420px; width: 100%; text-align: center; background: rgba(8,9,7,.72); border: 1px solid var(--line); border-radius: 1.6rem; padding: 2.4rem 1.8rem 2rem; backdrop-filter: blur(6px); box-shadow: 0 0 80px rgba(245,189,50,.18); }
+
+.ar-glow-ring { width: 96px; height: 96px; margin: 0 auto 1.1rem; border-radius: 50%; border: 2px solid var(--gold); display: grid; place-items: center; font-size: 1.7rem; color: var(--gold); animation: ar-pulse 1.8s ease-in-out infinite, ar-rotate 7s linear infinite; box-shadow: 0 0 0 0 rgba(245,189,50,.35); }
+.ar-glow-ring span { display: inline-block; animation: ar-rotate-counter 7s linear infinite; }
+
+.ar-overlay-title { font-family: var(--display); text-transform: uppercase; letter-spacing: -.03em; font-size: clamp(1.6rem, 6vw, 2.1rem); margin: 0 0 .5rem; color: var(--white); }
+.ar-overlay-title span { color: var(--gold); }
+.ar-overlay-tagline { color: var(--muted); margin: 0 0 1.5rem; font-size: .95rem; }
+
+.ar-icon-orbit { position: relative; width: 100%; height: 64px; margin-bottom: 1.6rem; }
+.ar-icon-orbit button { position: absolute; top: 0; width: 42px; height: 42px; border-radius: 50%; padding: 0; border: 1px solid var(--gold); overflow: hidden; cursor: pointer; background: var(--panel); animation: ar-float 3.4s ease-in-out infinite; }
+.ar-icon-orbit button img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ar-icon-orbit button:nth-child(1) { left: 0%; animation-delay: 0s; }
+.ar-icon-orbit button:nth-child(2) { left: 14%; animation-delay: .3s; }
+.ar-icon-orbit button:nth-child(3) { left: 28%; animation-delay: .6s; }
+.ar-icon-orbit button:nth-child(4) { left: 42%; top: 14px; animation-delay: .9s; }
+.ar-icon-orbit button:nth-child(5) { left: 58%; animation-delay: .45s; }
+.ar-icon-orbit button:nth-child(6) { left: 72%; animation-delay: .15s; }
+.ar-icon-orbit button:nth-child(7) { left: 86%; animation-delay: .75s; }
+.ar-icon-orbit button:hover, .ar-icon-orbit button:focus-visible { transform: scale(1.12); border-color: var(--yellow); }
+
+@keyframes ar-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(245,189,50,.35); } 50% { box-shadow: 0 0 0 14px rgba(245,189,50,0); } }
+@keyframes ar-rotate { to { transform: rotate(360deg); } }
+@keyframes ar-rotate-counter { to { transform: rotate(-360deg); } }
+@keyframes ar-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ar-glow-ring, .ar-glow-ring span, .ar-icon-orbit button { animation: none !important; }
+}
+
+/* ---------- Fallback (reused original markup, shown on demand) ---------- */
+.ar-page .fallback-page { min-height: 100svh; }

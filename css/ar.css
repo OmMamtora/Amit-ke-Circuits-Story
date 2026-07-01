@@ -110,14 +110,14 @@
   opacity: 1;
   pointer-events: none;
   transform-origin: 0 0;
-  will-change: transform; /* Triggers GPU Acceleration */
+  will-change: transform;
   z-index: 50;
-  display: none; /* Controlled by JS */
+  display: none;
 }
 
 /* ── UI Layer (Visit Microsite button) ─────────────────────────────────── */
 .ar-ui-layer {
-  /* position: fixed;
+  position: fixed;
   inset: 0;
   z-index: 105;
   pointer-events: none;
@@ -127,13 +127,7 @@
   align-items: center;
   padding-bottom: max(40px, env(safe-area-inset-bottom, 40px));
   opacity: 0;
-  transition: opacity 0.5s ease; */
-  position: fixed;
-  inset: 0;
-  z-index: 105;
-  opacity: 0;
   transition: opacity 0.5s ease;
-  pointer-events: none;
 }
 
 .ar-ui-layer.visible {

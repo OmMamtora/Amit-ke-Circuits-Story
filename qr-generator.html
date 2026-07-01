@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QR Generator</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/data.js"></script>
+
+<style>
+    body{
+        font-family:Arial;
+        background:#111;
+        color:white;
+        text-align:center;
+    }
+
+    #hidden{
+        position:absolute;
+        left:-9999px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Generating QR Codes...</h1>
+
+<div id="hidden"></div>
+
+<script>
+
+    const BASE_URL = "https://amit123.onrender.com/member.html?id=";
+
+    const hidden = document.getElementById("hidden");
+
+    function downloadCanvas(canvas,fileName){
+        const link=document.createElement("a");
+        link.download=fileName;
+        link.href=canvas.toDataURL("image/png");
+        link.click();
+    }
+    window.CIRCUIT_TEAM.forEach((member,index)=>{
+        const qrDiv=document.createElement("div");
+        hidden.appendChild(qrDiv);
+        new QRCode(qrDiv,{
+            text:BASE_URL+member.id,
+            width:400,
+            height:400
+        });
+        setTimeout(()=>{
+            const canvas=qrDiv.querySelector("canvas");
+            if(canvas){
+                downloadCanvas(canvas,member.id+".png");
+            }
+        },500*(index+1));
+    });
+</script>
+
+</body>
+</html>

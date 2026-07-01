@@ -102,13 +102,17 @@
 
 /* overlay-video is hidden off-screen; we only pull frames from it via canvas */
 #overlay-video {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  opacity: 1;
   pointer-events: none;
+  transform-origin: 0 0;
+  will-change: transform;
+  z-index: 50;
+  display: none;
 }
 
 /* ── UI Layer (Visit Microsite button) ─────────────────────────────────── */
